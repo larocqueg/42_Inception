@@ -73,3 +73,35 @@ For the Inception project, data persistence and secure communication are mandato
 - Networks: A custom Docker network is established to allow the WordPress container to communicate with the MariaDB container over a secure, internal-only bridge.
 
 - TLS Encryption: NGINX is configured to handle all external traffic over port 443 using TLSv1.2/v1.3, ensuring that data in transit is encrypted.
+
+# Virtual Machines vs Docker
+
+- VMs: Run a full Guest OS on top of a hypervisor, consuming significant RAM and CPU.
+
+- Docker: Shares the host's kernel and uses namespaces/cgroups for isolation, making it much more lightweight and faster to boot.
+
+# Secrets vs Environment Variables
+
+- Environment Variables: Easy to implement but can be visible via docker inspect or process listings, making them less secure for passwords.
+
+- Secrets: Encrypted at rest and only mounted into the container's memory at runtime (usually in /run/secrets/), providing a higher security tier for sensitive data like DB passwords.
+
+# Docker Network vs Host Network
+
+- Docker Network (Bridge): Provides an isolated network namespace where containers communicate via service names (e.g., mariadb). It keeps services private from the host's external ports unless explicitly mapped.
+
+- Host Network: The container shares the host’s IP and port space directly, removing isolation but offering slightly better performance.
+
+# Docker Volumes vs Bind Mounts
+
+- Docker Volumes: Managed by Docker (usually in /var/lib/docker/volumes/). They are the preferred way to persist data as they are more portable and handled by the Docker engine.
+
+- Bind Mounts: Maps a specific path on the host machine to the container. They are dependent on the host's file system structure.
+
+# AI Usage
+
+AI was used during this project for:
+
+- Debugging: Assisting in the troubleshooting of NGINX configuration syntax.
+
+- Documentation: Helping structure and refine the technical comparisons in this README.
