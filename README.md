@@ -30,7 +30,7 @@ make fclean
 
 Network Access
 
-Once the containers are running, you can access the WordPress site via your browser at: https://<login>.42.fr (ensure your /etc/hosts file is configured to map this domain to 127.0.0.1).
+Once the containers are running, you can access the WordPress site via your browser at: https://gde-la-r.42.fr (ensure your /etc/hosts file is configured to map this domain to 127.0.0.1).
 Project Design & Comparison
 Design Choices
 
