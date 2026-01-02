@@ -37,7 +37,6 @@ make fclean
 ```
 # Resources
 ### Docker
-Docker isolates each service in a container
 
 ### Docker compose
 
