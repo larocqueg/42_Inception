@@ -20,7 +20,7 @@ To launch the infrastructure, navigate to the root of the project and use the pr
 make
 
 # To stop the containers
-make stop
+make down
 
 # To remove containers, networks, and images
 make clean
