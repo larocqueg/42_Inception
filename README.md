@@ -22,6 +22,10 @@ git clone https://github.com/larocqueg/42_Inception.git && cd 42_Inception
 ```bash
 make
 ```
+### To see the website go to
+```bash
+https://gde-la-r.42.fr
+```
 
 ### To stop the containers
 ```bash
