@@ -15,27 +15,24 @@ All images are built from a base **Debian** image (Buster or Bullseye) to ensure
 ### Compilation and Execution
 To launch the infrastructure, navigate to the root of the project and use the provided `Makefile`:
 
+# To download the project
 ```bash
-# To download the project use
 git clone https://github.com/larocqueg/42_Inception.git
 ```
-
-```bash
 # To build and start the containers in detached mode
+```bash
 make
 ```
 
-```bash
 # To stop the containers
+```bash
 make down
 ```
-
-```bash
 # To remove containers, networks, and images
+```bash
 make clean
 ```
-
+# To do a database reset (deletes every image and container)
 ```bash
-# To remove containers, networks, images, and ALL volumes (database reset)
 make fclean 
 ```
