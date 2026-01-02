@@ -16,53 +16,26 @@ All images are built from a base **Debian** image (Buster or Bullseye) to ensure
 To launch the infrastructure, navigate to the root of the project and use the provided `Makefile`:
 
 ```bash
+# To download the project use
+git clone https://github.com/larocqueg/42_Inception.git
+```
+
+```bash
 # To build and start the containers in detached mode
 make
+```
 
+```bash
 # To stop the containers
 make down
+```
 
+```bash
 # To remove containers, networks, and images
 make clean
+```
 
+```bash
 # To remove containers, networks, images, and ALL volumes (database reset)
-make fclean
-
-Network Access
-
-Once the containers are running, you can access the WordPress site via your browser at: https://gde-la-r.42.fr (ensure your /etc/hosts file is configured to map this domain to 127.0.0.1).
-Project Design & Comparison
-Design Choices
-
-    Base Image: I chose Debian as the base image for all Dockerfiles to comply with the project requirement of using a "predictable" and stable environment.
-
-    Entrypoints: Custom shell scripts (mariadb-run.sh and wp-install.sh) are used to initialize databases and download WordPress dynamically only if they don't already exist, ensuring the project is "restart-friendly."
-
-    Inter-container Communication: Containers communicate over a dedicated internal Docker network, keeping the database shielded from the public internet.
-
-Technical Comparisons
-Topic	Comparison
-Virtual Machines vs Docker	VMs virtualize the hardware and require a full Guest OS. Docker virtualizes the OS kernel, making containers much faster to start and lighter on system resources.
-Secrets vs Env Variables	Environment Variables are easy to use but can be leaked via docker inspect. Secrets are more secure as they are encrypted and only accessible to the container at runtime.
-Docker Network vs Host Network	Docker Network provides an isolated bridge for containers to talk to each other. Host Network removes isolation, making the container use the host's network stack directly.
-Docker Volumes vs Bind Mounts	Volumes are managed by Docker and are better for performance and backups. Bind Mounts link a specific host path to the container, which is useful for development.
-Resources
-Documentation & Articles
-
-    Official Docker Documentation
-
-    NGINX Configuration Guide
-
-    WP-CLI Handbook
-
-    Understanding TLS/SSL Certificates
-
-Use of AI
-
-AI was utilized in this project for the following specific tasks:
-
-    Scripting Logic: Assisting in the creation of the wp-install.sh script to handle the WP-CLI commands and verification of existing files.
-
-    Troubleshooting: Debugging the NGINX SSL configuration and explaining the differences between FastCGI parameters.
-
-    Documentation: Generating the structure and comparison tables for this README.md to ensure all 42 curriculum requirements were met.
+make fclean 
+```
