@@ -70,3 +70,21 @@ This file includes:
 
 > [!NOTE]
 > Never send your .env with real information to github of anywhere that is not safe!
+
+## How to check that all services are running
+
+To check all containners that are running use:
+
+```bash
+docker ps
+```
+
+Now check that the output shows something like this:
+
+```bash
+nginx       Up
+wordpress   Up
+mariadb     Up
+```
+
+If the output look like this, everything is working as expected!
