@@ -69,7 +69,7 @@ This file includes:
 - And other information that is needed for the project
 
 > [!NOTE]
-> Never send your .env with real information to github of anywhere that is not safe!
+> Never send your .env with real information to github or anywhere that is not safe!
 
 ## How to check that all services are running
 
