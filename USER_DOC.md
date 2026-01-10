@@ -8,7 +8,7 @@
 
 ## Start the project
 
-Go to the root of the repository and do:
+Go to the root of the repository and run:
 
 ```bash
 make
@@ -16,21 +16,21 @@ make
 
 This command will:
 
-- Builds all `images` from the `Dockerfiles`
-- Creates constainers
-- Starts everything in the background `(deamon)`
+- Build all `images` from the `Dockerfiles`
+- Create containers
+- Start everything in the background (`daemon`)
 
 ## Stop the project
 
-Go to the root of the repository and do:
+Go to the root of the repository and run:
 
 ```bash
 make down
 ```
 
-This command will only stop the project, but the images are still there;
+This command will only stop the project; the images will still remain.
 
-If you want to fully dedlete everything from the database and destroy the images use:
+If you want to fully delete everything from the database and remove the images, use:
 
 ```bash
 make fclean
@@ -46,15 +46,15 @@ https://gde-la-r.42.fr
 
 ## Access the administrator
 
-To access the administrator page go to:
+To access the administrator page, go to:
 
 ```bash
 https://gde-la-r.42.fr/wp-admin
 ```
 
-## Locate and manege the credentials
+## Locate and manage the credentials
 
-The credentials are stored inside .env file, it is located at:
+The credentials are stored inside the `.env` file, which is located at:
 
 ```bash
 ./srcs/.env
@@ -66,20 +66,20 @@ This file includes:
 - Host configuration
 - WordPress admin user and password
 - WordPress guest user and password
-- And other information that is needed for the project
+- Other information needed for the project
 
 > [!NOTE]
-> Never send your .env with real information to github or anywhere that is not safe!
+> Never upload your `.env` file with real information to GitHub or anywhere that is not secure!
 
 ## How to check that all services are running
 
-To check all containners that are running use:
+To check all running containers, use:
 
 ```bash
 docker ps
 ```
 
-Now check that the output shows something like this:
+Now verify that the output shows something similar to:
 
 ```bash
 nginx       Up
@@ -87,4 +87,4 @@ wordpress   Up
 mariadb     Up
 ```
 
-If the output look like this, everything is working as expected!
+If the output looks like this, everything is working as expected.
