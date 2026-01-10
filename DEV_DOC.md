@@ -1,6 +1,6 @@
 # Developer documentation
 
-This documentation will explain in a short way how to set up the envirioment from scratch.MMakefile
+This documentation will explain in a short way how to set up the envirioment from scratch
 
 ## Prerequisites
 
