@@ -1,23 +1,25 @@
 # Developer documentation
 
-This documentation will explain in a short way how to set up the envirioment from scratch
+This documentation explains in a short way how to set up the environment from scratch.
 
 ## Prerequisites
 
 Ensure all prerequisites are installed before building the project:
 
-- ```Docker```
-- ```Docker compose```
-- ```Clang```
-- ```Make```
-- ```Git```
+- `Docker`
+- `Docker Compose`
+- `Clang`
+- `Make`
+- `Git`
+> [!NOTE]
+> Check docker and docker compose documentation to download them correctly ```https://docs.docker.com/compose/install/```
 
 ### Configuration & Secrets
 
-The project relies on environment variables stored in a `.env` file. 
+The project relies on environment variables stored in a `.env` file.
 
 1. Navigate to `./srcs/`.
-2. Create a `.env` file based on the provided template (if available) or manual requirements.
+2. Create a `.env` file based on the provided template (if available) or the manual requirements.
 3. Required variables include:
    - `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`, `SQL_ROOT_PASSWORD`
    - `WP_ADMIN_USER`, `WP_ADMIN_PASSWORD`, `WP_USER`, `WP_PASSWORD`
@@ -25,23 +27,23 @@ The project relies on environment variables stored in a `.env` file.
 
 ## Build and launch
 
-To build the project use:
+### To build the project, use:
 ```bash
 make
 ```
-This command will buidl all images and create the containers;
+This command will build all images and create the containers.
 
-To stop containers and network use:
+### To stop containers and the network, use:
 ```bash
 make down
 ```
 
-To put everything up again:
+### To start everything again:
 ```bash
 make up
 ```
 
-To remove containers, networks and images:
+### To remove containers, networks, and images:
 ```bash
 make clean
 ```
@@ -51,23 +53,25 @@ To remove everything:
 make fclean
 ```
 
-To remove everything and rebuild the project:
+### To remove everything and rebuild the project:
 ```bash
 make re
 ```
-This command triggers ```make fclean``` and ```make```
+This command triggers `make fclean` followed by `make`.
 
-## Usefull commands to manage containers and volumes
+## Useful commands to manage containers and volumes
+
 ```bash
 docker ps
 ```
-Lists all active containers
+Lists all active containers.
+
 ```bash
 docker compose down -v
 ```
-Removes containers and volumes
+Removes containers and volumes.
 
-### The following commands allow you to access containers shell
+### The following commands allow you to access container shells
 
 ```bash
 docker exec -it mariadb bash
@@ -76,7 +80,7 @@ docker exec -it mariadb bash
 docker exec -it wordpress bash
 ```
 ```bash
-docker exec -t nginx bash
+docker exec -it nginx bash
 ```
 
 ## Project files
@@ -85,7 +89,8 @@ docker exec -t nginx bash
 ```bash
 /home/gde-la-r/data/wordpress
 ```
-### MariaDb files:
+
+### MariaDB files:
 ```bash
 /home/gde-la-r/data/mariadb
 ```
