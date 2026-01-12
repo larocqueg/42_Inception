@@ -48,7 +48,7 @@ make up
 make clean
 ```
 
-To remove everything:
+### To remove everything:
 ```bash
 make fclean
 ```
