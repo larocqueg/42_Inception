@@ -94,6 +94,11 @@ docker exec -it nginx bash
 ```bash
 /home/gde-la-r/data/mariadb
 ```
+> [!Note]
+> This path is relative to my vm user, gde-la-r will be your user, to check what is your user use the following command:
+```bash
+whoami
+```
 
 ### This allows:
 
