@@ -19,7 +19,7 @@ Ensure all prerequisites are installed before building the project:
 The project relies on environment variables stored in a `.env` file.
 
 1. Navigate to `./srcs/`.
-2. Create a `.env` file based on the provided template (if available) or the manual requirements.
+2. Create a `.env` file based on the provided template.
 3. Required variables include:
    - `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`, `SQL_ROOT_PASSWORD`
    - `WP_ADMIN_USER`, `WP_ADMIN_PASSWORD`, `WP_USER`, `WP_PASSWORD`
