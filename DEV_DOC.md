@@ -87,7 +87,7 @@ docker exec -it nginx bash
 
 ### WordPress files:
 ```bash
-/home/gde-la-r/data/wordpress
+/home/${USER}/data/wordpress
 ```
 
 ### MariaDB files:
